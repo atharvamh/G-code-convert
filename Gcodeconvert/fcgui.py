@@ -17,7 +17,7 @@ class fileoperations:
         file1=open(self.filename,"r")
         file2=open(self.textboxinput,"w")
         lines = file1.readlines()
-        for line in lines[0:100]:
+        for line in lines:
             if(line[0] == ';'):
                 if("LAYER_COUNT" in line):
                     self.totlayercount = line[len("LAYER_COUNT")+2:].strip()
